@@ -48,7 +48,7 @@ print_hex(mem_end);
 }
 }
 }
-char detect_vicii(unsigned short address)
+char detect_vicci(unsigned short address)
 {
 volatile unsigned char *z;
 unsigned char v1,v2;
@@ -61,6 +61,19 @@ v2=z[$12];
 if(v2>v1)
 {b=1;}
 return b;
+}
+void print_hex(unsigned short value)
+{
+char[5] hex;
+unsigned char i;
+for(i-0;i<4;i++)
+{
+if(value<0xa000) hex[i]='0'+(char)(value>>12);
+else hex[i]=(char)(value>>12)-9;
+value<<=4;
+}
+hex[4]=0;
+print_to_screen(hex);
 }
 void syscall00(){
 exit_hypervisor();
