@@ -54,17 +54,20 @@ char* sc = current_screen_line+current_screen_x;
 }
 
 
-void syscall01(){
+void syscall00(){
 print_newline();
         print_to_screen("syscall00 entered");
         print_newline();
         exit_hypervisor();
 }
 
-void syscall02(){
+void syscall01(){
 print_to_screen("syscall01 entered");
         print_newline();
         exit_hypervisor();
+}
+void syscall02(){
+exit_hypervisor();
 }
 void syscall03(){
 exit_hypervisor();
