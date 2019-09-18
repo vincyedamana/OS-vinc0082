@@ -267,13 +267,7 @@ memset(COLS, WHITE, 40*25);
 char*sc = SCREEN+40;
 char*msg = MESSAGE;
 
-while(true){
-if(*RASTER==54 || *RASTER==65){
-                  *BGCOL = WHITE;
-}else{
-               *BGCOL = BLACK;
-}
-}
+
 print_to_screen(MESSAGE);
 
 start_simple_program();
