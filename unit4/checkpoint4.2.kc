@@ -38,6 +38,7 @@ void start_simple_program(){
 *(unsigned char *)$0400=$01;
 exit_hypervisor();
 *(unsigned char *)$0401=$02;
+while(true) continue;
 }
 
 void main(){
