@@ -30,9 +30,9 @@ void start_simple_program(){
 *(unsigned char *)$030E=$00;
 *(unsigned char *)$030F=$00;
 *(unsigned char *)$0310=$60;
-*(unsigned char *)$0D701=$03;
-*(unsigned char *)$0D702=$00;
-*(unsigned char *)$0D705=$00;
+*(unsigned char *)$D701=$03;
+*(unsigned char *)$D702=$00;
+*(unsigned char *)$D705=$00;
 *(unsigned short *)$D648=$080D;
 
 *(unsigned char *)$0400=$01;
@@ -298,11 +298,9 @@ exit_hypervisor();
 }
 void exit_hypervisor(){
 
-*(unsigned char *)$D02F = $47;
-*(unsigned char *)$D02F = $53;
-
 *(unsigned char *)$D67F = $01;
 *(unsigned char *)$0402 = $03;
+
 }
 
 #pragma data_seg(Syscall)
