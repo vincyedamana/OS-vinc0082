@@ -298,6 +298,7 @@ exit_hypervisor();
 }
 void exit_hypervisor(){
 *(unsigned char *)$D67F = $01;
+*(unsigned char *)$0402 = $03;
 }
 
 #pragma data_seg(Syscall)
