@@ -245,7 +245,7 @@ exit_hypervisor();
 void syscall64(){
 exit_hypervisor();
 }
-void RESET(){
+
 void syscall00(){
 print_newline();
         print_to_screen("syscall00 entered");
@@ -258,6 +258,9 @@ print_to_screen("syscall01 entered");
         print_newline();
         exit_hypervisor();
 }
+
+void RESET(){
+
 *VIC_MEMORY = 0x14;
 memset(SCREEN,' ', 40*25);
 memset(COLS, WHITE, 40*25);
